@@ -1,5 +1,8 @@
 package main.java;
 
+import main.java.animals.Animal;
+import main.java.animals.Bird;
+import main.java.animals.Mammal;
 import main.java.roles.Director;
 import main.java.roles.Employee;
 import main.java.roles.Manager;
@@ -14,14 +17,8 @@ public class Files {
 
         //executeFirstExercise();
         //executeSecondExercise();
-
-        Employee employee = new Employee("Andi", "Shkoza", 2100);
-        Manager manager = new Manager("Andi", "Shkoza", 2100, 5);
-        Director director = new Director("Andi", "Shkoza", 2100, 5, 20000);
-        System.out.println("Employee: \n" + employee.toString());
-        System.out.println("Manger: \n" + manager.toString());
-        System.out.println("Director: \n" + director.toString());
-
+        //executeThirdExercise();
+        executeFourthExercise();
     }
 
     private static void executeFirstExercise() {
@@ -62,6 +59,27 @@ public class Files {
         //fifth
         File fileToDisplayLatestChange = new File("C:\\Users\\kertu\\Pictures");
         System.out.println(new Date(fileToDisplayLatestChange.lastModified()));
+    }
+
+    private static void executeThirdExercise() {
+        Employee employee = new Employee("Andi", "Shkoza", 2100);
+        Manager manager = new Manager("Andi", "Shkoza", 2100, 5);
+        Director director = new Director("Andi", "Shkoza", 2100, 5, 20000);
+        System.out.println("Employee: \n" + employee.toString());
+        System.out.println("Manger: \n" + manager.toString());
+        System.out.println("Director: \n" + director.toString());
+    }
+
+    private static void executeFourthExercise() {
+        Animal animal = new Animal("Lion", "RRR");
+        Mammal mammal = new Mammal("Lion", "RRR", "Orange");
+        Bird bird = new Bird("Seagull", "RRR", "white", 2);
+        System.out.println("Animal: \n" + animal.toString());
+        System.out.println("Mammal: \n" + mammal.toString());
+        System.out.println("Bird: \n" + bird.toString());
+        System.out.println("Animal sound: \n" + animal.getSound());
+        System.out.println("Mammal sound: \n" + mammal.getSound());
+        System.out.println("Bird sound: \n" + bird.getSound());
     }
 
     public static long calculateFileSize(File file) {
