@@ -1,3 +1,9 @@
+package main.java;
+
+import main.java.roles.Director;
+import main.java.roles.Employee;
+import main.java.roles.Manager;
+
 import java.io.File;
 import java.util.Arrays;
 import java.util.Date;
@@ -5,8 +11,17 @@ import java.util.Objects;
 
 public class Files {
     public static void main(String[] args) {
-        executeFirstExercise();
-        executeSecondExercise();
+
+        //executeFirstExercise();
+        //executeSecondExercise();
+
+        Employee employee = new Employee("Andi", "Shkoza", 2100);
+        Manager manager = new Manager("Andi", "Shkoza", 2100, 5);
+        Director director = new Director("Andi", "Shkoza", 2100, 5, 20000);
+        System.out.println("Employee: \n" + employee.toString());
+        System.out.println("Manger: \n" + manager.toString());
+        System.out.println("Director: \n" + director.toString());
+
     }
 
     private static void executeFirstExercise() {
